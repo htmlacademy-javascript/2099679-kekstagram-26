@@ -1,18 +1,22 @@
-let getRandomNumber = function (number1, number2) {
-  if (number2 < number1) {
-    return Math.floor(Math.random()*(number1 - number2 + 1)) + number2;
+const getRandomNumber = function (number1, number2) {
+  if (number1 >= 0 && number2 >=0) {
+    if (number2 < number1) {
+      return Math.floor(Math.random()*(number1 - number2 + 1)) + number2;
+    }
+    if (number2 === number1) {
+      return number2;
+      }
+      return Math.floor(Math.random()*(number2 - number1 + 1)) + number1;
+    } else {
+      console.log('Неверный диапазон');
   }
-  if (number2 === number1) {
-    return number2;
-  }
-  return Math.floor(Math.random()*(number2 - number1 + 1)) + number1;
-}
+};
 
-let checkStringLength = function (string, maxLength) {
-  if (string.length > maxLength) {
+const checkStringLength = function (string, maxLength) {
+  if (string.length <= maxLength) {
     return true;
   }
   return false;
-}
+};
 getRandomNumber(345, 456);
 checkStringLength('Привет, всем!', 140);
