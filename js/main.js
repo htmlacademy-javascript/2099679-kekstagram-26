@@ -14,3 +14,5 @@ let checkStringLength = function (string, maxLength) {
   }
   return false;
 }
+getRandomNumber(345, 456);
+checkStringLength('Привет, всем!', 140);
