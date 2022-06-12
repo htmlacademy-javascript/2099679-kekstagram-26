@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Dmitry Stepanov](https://up.htmlacademy.ru/javascript/26/user/2099679).
-* Наставник: `Михаил Карямин`.
+* Наставник: [Михаил Карямин](https://htmlacademy.ru/profile/id959581).
 
 ---
 
