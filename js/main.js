@@ -74,7 +74,7 @@ const makeComment = () =>       // создаем комментарий
     id: getIdComments(), // ID комментария
     avatar: `img/avatar-${getRandomPositiveInteger(1, 6)}.svg`,
     message: getRandomArrayElement(MESSAGES),
-    nik: getRandomArrayElement(NAMES)
+    name: getRandomArrayElement(NAMES)
   });
 
 const makeComments = () => Array.from({length: getRandomPositiveInteger(1, 4)}, makeComment);
@@ -90,7 +90,7 @@ const makePhoto = () =>         // создаем объект
 
 const photosArray = Array.from({length: COUNT_OF_PHOTOS}, makePhoto);// формирую финальный массив
 
-photosArray();
+export {photosArray};
 
 /* Мои функции ниже (сохраняю на всякий случай):
 function getRandomNumber(number1, number2) {
