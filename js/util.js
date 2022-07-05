@@ -15,4 +15,7 @@ function checkStringLength (string, length) {
   return string.length <= length;
 }
 
+const isEscapeKey = (evt) => evt.key === 'Escape';
+
 export {checkStringLength};
+export {isEscapeKey};
