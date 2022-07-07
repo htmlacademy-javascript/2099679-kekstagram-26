@@ -79,9 +79,9 @@ const makePhoto = () =>         // создаем объект
     comments: makeComments()
   });
 
-const photosArray = Array.from({length: COUNT_OF_PHOTOS}, makePhoto);// формирую финальный массив
+const createPhotoArray = () => Array.from({length: COUNT_OF_PHOTOS}, makePhoto);// формирую финальный массив
 
-export {photosArray};
+export {createPhotoArray};
 
 /* Мои функции ниже (сохраняю на всякий случай):
 function getRandomNumber(number1, number2) {

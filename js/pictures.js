@@ -1,9 +1,9 @@
-import {photosArray} from './data.js';
+import {createPhotoArray} from './data.js';
 
 const similarListElement = document.querySelector('.pictures');
 const similarPhotoTemplate = document.querySelector('#picture').content;
 
-const similarPhotos = photosArray;
+const similarPhotos = createPhotoArray();
 const similarListFragment = document.createDocumentFragment();
 
 similarPhotos.forEach(({url, likes, comments}) => {
