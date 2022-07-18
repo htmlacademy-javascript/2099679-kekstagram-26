@@ -27,3 +27,14 @@ scaleBiggerButton.addEventListener('click', () => {
   uploadPreview.style.transform = `scale(${scaleValueNumber})`;
 });
 
+const resetScale = function () {
+  let scaleValueString = scaleValue.getAttribute('value');
+  let scaleValueNumber = scaleValueString.replace('%', '')/100;
+  if (scaleValueNumber !== 1) {
+    scaleValueNumber = 1;
+  }
+  scaleValueString = scaleValue.setAttribute('value', `${scaleValueNumber * 100  }%`);
+  uploadPreview.style.transform = `scale(${scaleValueNumber})`;
+};
+
+export {resetScale};
