@@ -1,5 +1,5 @@
-import { sendData } from './data-get-send.js';
-import { closeModalWithError } from './form-open-close.js';
+import {sendData} from './data-get-send.js';
+import {closeModalWithError} from './form-open-close.js';
 
 const userForm = document.querySelector('.img-upload__form');
 const submitButton = document.querySelector('.img-upload__submit');
@@ -32,4 +32,4 @@ const setUserFormSubmit = (closeModal) => {
   });
 };
 
-export{setUserFormSubmit};
+export {setUserFormSubmit};

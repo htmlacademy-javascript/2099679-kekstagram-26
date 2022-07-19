@@ -1,7 +1,7 @@
 import './photos.js';
-import { resetScale } from './redaction.js';
-import { resetFilter } from './effects.js';
-import { isEscapeKey } from './util.js';
+import {resetScale} from './redaction.js';
+import {resetFilter} from './effects.js';
+import {isEscapeKey} from './util.js';
 
 const uploadFile = document.querySelector('#upload-file');
 const uploadOverlay = document.querySelector('.img-upload__overlay');
@@ -50,4 +50,4 @@ uploadCancelButton.addEventListener('click', () => {
   closeModal();
 });
 
-export{ openModal, closeModal, closeModalWithError};
+export{openModal, closeModal, closeModalWithError};

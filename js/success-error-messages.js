@@ -1,4 +1,4 @@
-import { isEscapeKey } from './util.js';
+import {isEscapeKey} from './util.js';
 
 const successUploadMessageTemplate = document.querySelector('#success').content;
 const bodyElement = document.querySelector('body');
@@ -29,8 +29,8 @@ const openSuccessMessage = () => {
 };
 
 function closeSuccessMessage () {
-  const documentFragment = document.querySelector('.success');
-  documentFragment.remove();
+  const successMessage = document.querySelector('.success');
+  successMessage.remove();
 
   document.removeEventListener('keydown', onEscapeKeyDown);
 }
@@ -60,8 +60,8 @@ const openErrorMessage = () => {
 };
 
 function closeErrorMessage () {
-  const documentFragment = document.querySelector('.error');
-  documentFragment.remove();
+  const errorMessage = document.querySelector('.error');
+  errorMessage.remove();
 
   document.removeEventListener('keydown', onErrorEscapeKeyDown);
 }

@@ -1,4 +1,3 @@
-//import './data.js';
 import './photos.js';
 import './redaction.js';
 import './effects.js';

@@ -5,11 +5,7 @@ function getRandomPositiveInteger (a, b) {
   return Math.floor(result);
 }
 
-export {getRandomPositiveInteger};
-
 const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
-
-export {getRandomArrayElement};
 
 function checkStringLength (string, length) {
   return string.length <= length;
@@ -43,3 +39,5 @@ const showAlert = (message) => {
 export {checkStringLength};
 export {isEscapeKey};
 export {showAlert};
+export {getRandomPositiveInteger};
+export {getRandomArrayElement};

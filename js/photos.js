@@ -1,9 +1,6 @@
-//import {createPhotoArray} from './data.js'; исключаем тестовые данные
-
 const similarListElement = document.querySelector('.pictures');
 const similarPhotoTemplate = document.querySelector('#picture').content;
 
-//const similarPhotos = createPhotoArray(); исключаем тестовые данные
 const renderSimilarList = (similarPhotos) => {
   const similarListFragment = document.createDocumentFragment();
 
@@ -18,4 +15,4 @@ const renderSimilarList = (similarPhotos) => {
   similarListElement.appendChild(similarListFragment);
 };
 
-export{renderSimilarList};
+export {renderSimilarList};

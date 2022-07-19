@@ -25,4 +25,4 @@ const resetFilter = function () {
   document.querySelector('#effect-none').checked = true;
 };
 
-export { resetFilter };
+export {resetFilter};

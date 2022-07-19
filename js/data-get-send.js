@@ -1,5 +1,5 @@
-import { showAlert } from './util.js';
-import { openSuccessMessage, openErrorMessage } from './success-error-messages.js';
+import {showAlert} from './util.js';
+import {openSuccessMessage, openErrorMessage} from './success-error-messages.js';
 
 const getData = (onSuccess) => {
   fetch('https://26.javascript.pages.academy/kekstagram/data')
@@ -21,7 +21,7 @@ const getData = (onSuccess) => {
 
 const sendData = (onSuccess, onFail, body) => {
   fetch(
-    'https://26.javascript.pages.academ/kekstagram',
+    'https://26.javascript.pages.academy/kekstagram',
     {
       method: 'POST',
       body,
