@@ -50,4 +50,4 @@ uploadCancelButton.addEventListener('click', () => {
   closeModal();
 });
 
-export{openModal, closeModal, closeModalWithError};
+export {openModal, closeModal, closeModalWithError};
