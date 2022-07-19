@@ -13,18 +13,18 @@ const uploadHashtag = document.querySelector('.text__hashtags');
 function onPopupEscapeKeyDown (evt) {
   if (isEscapeKey(evt)) {
     evt.preventDefault();
-    closeModal();
+    onModalClose();
   }
 }
 
-const openModal = () => {
+const onModalOpen = () => {
   uploadOverlay.classList.remove('hidden');
   uploadOpen.classList.add('modal-open');
 
   document.addEventListener('keydown', onPopupEscapeKeyDown);
 };
 
-function closeModal () {
+function onModalClose () {
   uploadOverlay.classList.add('hidden');
   uploadOpen.classList.remove('modal-open');
   uploadFile.value ='';
@@ -43,11 +43,11 @@ function closeModalWithError () {
 }
 
 uploadFile.addEventListener('change', () => {
-  openModal();
+  onModalOpen();
 });
 
 uploadCancelButton.addEventListener('click', () => {
-  closeModal();
+  onModalClose();
 });
 
-export {openModal, closeModal, closeModalWithError};
+export {onModalOpen, onModalClose, closeModalWithError};
