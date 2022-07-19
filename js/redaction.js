@@ -1,10 +1,10 @@
+const SCALE_VALUE_MIN = 0.25;
+const SCALE_VALUE_MAX = 1;
+const SCALE_VALUE_STEP = 0.25;
 const scaleSmallerButton = document.querySelector('.scale__control--smaller');
 const scaleBiggerButton = document.querySelector('.scale__control--bigger');
 const scaleValue = document.querySelector('.scale__control--value');
 const uploadPreview = document.querySelector('.img-upload__preview');
-const SCALE_VALUE_MIN = 0.25;
-const SCALE_VALUE_MAX = 1;
-const SCALE_VALUE_STEP = 0.25;
 
 scaleSmallerButton.addEventListener('click', () => {
   const scaleValueString = scaleValue.getAttribute('value');
