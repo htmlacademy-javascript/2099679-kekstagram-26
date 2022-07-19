@@ -7,13 +7,13 @@ const errorUploadMessageTemplate = document.querySelector('#error').content;
 const onEscapeKeyDown = (evt) => {
   if (isEscapeKey(evt)) {
     evt.preventDefault();
-    closeSuccessMessage();
+    onSuccessMessageClose();
   }
 };
 
 const onWindowClick = (evt) => {
   if (!evt.target.closest('div')) {
-    closeSuccessMessage();
+    onSuccessMessageClose();
     window.removeEventListener('click', onWindowClick);
   }
 };
@@ -24,11 +24,11 @@ const openSuccessMessage = () => {
 
   document.addEventListener('keydown', onEscapeKeyDown);
   const closeMessageButton = document.querySelector('.success__button');
-  closeMessageButton.addEventListener('click', closeSuccessMessage);
+  closeMessageButton.addEventListener('click', onSuccessMessageClose);
   document.addEventListener('click', onWindowClick);
 };
 
-function closeSuccessMessage () {
+function onSuccessMessageClose () {
   const successMessage = document.querySelector('.success');
   successMessage.remove();
 
@@ -38,13 +38,13 @@ function closeSuccessMessage () {
 const onErrorEscapeKeyDown = (evt) => {
   if (isEscapeKey(evt)) {
     evt.preventDefault();
-    closeErrorMessage();
+    onErrorMessageClose();
   }
 };
 
 const onWindowClickError = (evt) => {
   if (!evt.target.closest('div')) {
-    closeErrorMessage();
+    onErrorMessageClose();
     window.removeEventListener('click', onWindowClickError);
   }
 };
@@ -55,11 +55,11 @@ const openErrorMessage = () => {
 
   document.addEventListener('keydown', onErrorEscapeKeyDown);
   const closeMessageButton = document.querySelector('.error__button');
-  closeMessageButton.addEventListener('click', closeErrorMessage);
+  closeMessageButton.addEventListener('click', onErrorMessageClose);
   document.addEventListener('click', onWindowClickError);
 };
 
-function closeErrorMessage () {
+function onErrorMessageClose () {
   const errorMessage = document.querySelector('.error');
   errorMessage.remove();
 

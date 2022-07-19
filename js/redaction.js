@@ -2,14 +2,17 @@ const scaleSmallerButton = document.querySelector('.scale__control--smaller');
 const scaleBiggerButton = document.querySelector('.scale__control--bigger');
 const scaleValue = document.querySelector('.scale__control--value');
 const uploadPreview = document.querySelector('.img-upload__preview');
+const SCALE_VALUE_MIN = 0.25;
+const SCALE_VALUE_MAX = 1;
+const SCALE_VALUE_STEP = 0.25;
 
 scaleSmallerButton.addEventListener('click', () => {
   const scaleValueString = scaleValue.getAttribute('value');
   let scaleValueNumber = scaleValueString.replace('%', '')/100;
-  if (scaleValueNumber > 0.25) {
-    scaleValueNumber -= 0.25;
+  if (scaleValueNumber > SCALE_VALUE_MIN) {
+    scaleValueNumber -= SCALE_VALUE_STEP;
   } else {
-    scaleValueNumber = 0.25;
+    scaleValueNumber = SCALE_VALUE_MIN;
   }
   scaleValue.setAttribute('value', `${scaleValueNumber * 100  }%`);
   uploadPreview.style.transform = `scale(${scaleValueNumber})`;
@@ -18,22 +21,22 @@ scaleSmallerButton.addEventListener('click', () => {
 scaleBiggerButton.addEventListener('click', () => {
   const scaleValueString = scaleValue.getAttribute('value');
   let scaleValueNumber = scaleValueString.replace('%', '')/100;
-  if (scaleValueNumber < 1) {
-    scaleValueNumber += 0.25;
+  if (scaleValueNumber < SCALE_VALUE_MAX) {
+    scaleValueNumber += SCALE_VALUE_STEP;
   } else {
-    scaleValueNumber = 1;
+    scaleValueNumber = SCALE_VALUE_MAX;
   }
   scaleValue.setAttribute('value', `${scaleValueNumber * 100  }%`);
   uploadPreview.style.transform = `scale(${scaleValueNumber})`;
 });
 
 const resetScale = function () {
-  let scaleValueString = scaleValue.getAttribute('value');
+  const scaleValueString = scaleValue.getAttribute('value');
   let scaleValueNumber = scaleValueString.replace('%', '')/100;
   if (scaleValueNumber !== 1) {
     scaleValueNumber = 1;
   }
-  scaleValueString = scaleValue.setAttribute('value', `${scaleValueNumber * 100  }%`);
+  scaleValue.setAttribute('value', `${scaleValueNumber * 100  }%`);
   uploadPreview.style.transform = `scale(${scaleValueNumber})`;
 };
 
